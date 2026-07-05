@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+logs/
+*.log
+
+# Streamlit
+.streamlit/
+
+# Temporary data and cache
+data/*.json
+!data/dummy_trades_template.json
+.chroma/
+.pytest_cache/

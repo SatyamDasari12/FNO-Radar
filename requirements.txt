@@ -1,0 +1,28 @@
+streamlit>=1.32.0,<2.0.0
+pandas>=2.1.0,<3.0.0
+numpy>=1.26.0,<3.0.0
+yfinance>=0.2.30,<0.3.0
+nsepython>=0.0.973,<0.1.0
+ta>=0.11.0,<0.12.0
+scikit-learn>=1.3.0,<2.0.0
+plotly>=5.18.0,<6.0.0
+requests>=2.31.0,<3.0.0
+feedparser>=6.0.10,<7.0.0
+groq>=0.5.0,<1.0.0
+python-dotenv>=1.0.0,<2.0.0
+loguru>=0.7.0,<1.0.0
+tqdm>=4.66.0,<5.0.0
+pytz>=2024.1
+
+# Optional News RAG stack.
+# On Windows, if chroma-hnswlib fails to build, install "Build Tools for Visual Studio"
+# from https://visualstudio.microsoft.com/visual-cpp-build-tools/ or use WSL.
+chromadb>=0.5.0,<1.0.0
+sentence-transformers>=2.5.0,<3.0.0
+
+# Optional: Prophet for weekly price-range forecast.
+# On Windows, if install fails with "No such file or directory" (path too long),
+# either enable Long Paths: https://pip.pypa.io/warnings/enable-long-paths
+# or install from a short directory (e.g. C:\py\proj). App works without this
+# using volatility + ML ensemble for predictions.
+prophet>=1.1.5,<2.0.0
