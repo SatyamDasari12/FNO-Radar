@@ -124,6 +124,13 @@ _HEADERS = {
 def load_universe_symbols(universe: str) -> List[str]:
     """Fetch symbols for Largecap 100, Midcap 200, Smallcap 200, or Microcap 250 dynamically, falling back to static lists."""
     univ_lower = universe.lower()
+    if "f&o" in univ_lower or "fno" in univ_lower:
+        fno_syms = load_fno_symbols()
+        if fno_syms:
+            logger.info(f"Loaded {len(fno_syms)} F&O symbols.")
+            return [f"{s}.NS" for s in fno_syms]
+        # fallback to top largecaps if no fno data
+        univ_lower = "large"
     
     if "large" in univ_lower:
         fallback = LARGECAP_FALLBACK
@@ -500,7 +507,7 @@ def scan_shortterm_stocks(
     vix = fetch_india_vix()
     nifty_ret = fetch_nifty_return_10d()
     
-    end_date = datetime.now().date()
+    end_date = datetime.now().date() + timedelta(days=1)
     start_date = end_date - timedelta(days=365)  # Fetch 1 year of data for macro context
     
     rows = []

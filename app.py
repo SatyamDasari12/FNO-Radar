@@ -5,6 +5,7 @@ from ui.intraday_scanner_page import render_intraday_scanner_page
 from ui.options_scanner_page import render_options_scanner_page
 from ui.portfolio_advisor_page import render_portfolio_advisor_page
 from ui.shortterm_scanner_page import render_shortterm_scanner_page
+from ui.early_breakout_page import render_early_breakout_page
 from ui.paper_trader_page import render_paper_trader_page
 
 
@@ -13,6 +14,7 @@ PAGES = {
     "⚡ Intraday Scanner": render_intraday_scanner_page,
     "📊 Options Scanner": render_options_scanner_page,
     "🔍 ShortTerm Scanner": render_shortterm_scanner_page,
+    "🚀 Early Breakout": render_early_breakout_page,
     "🧺 Portfolio Advisor": render_portfolio_advisor_page,
     "🎮 Dummy Trading": render_paper_trader_page,
 }

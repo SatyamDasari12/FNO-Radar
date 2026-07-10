@@ -50,8 +50,8 @@ def render_shortterm_scanner_page() -> None:
     with col1:
         universe_choice = st.selectbox(
             "Stock Universe",
-            ["Nifty Largecap 100", "Nifty Midcap 200", "Nifty Smallcap 200", "Nifty Microcap 250"],
-            index=1,  # Keep Midcap as default index
+            ["F&O Only", "Nifty Largecap 100", "Nifty Midcap 200", "Nifty Smallcap 200", "Nifty Microcap 250"],
+            index=0,  # Keep F&O Only as default index
             help="Select which index universe to scan."
         )
     with col2:

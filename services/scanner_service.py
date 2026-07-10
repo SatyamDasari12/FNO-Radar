@@ -345,7 +345,7 @@ def scan_intraday_momentum_stocks(
     if not symbols:
         return pd.DataFrame()
 
-    end = datetime.now().date()
+    end = datetime.now().date() + timedelta(days=1)
     start = end - timedelta(days=60)
 
     import time
@@ -418,7 +418,7 @@ def compute_sector_rotation(universe: str = "NIFTY 100") -> pd.DataFrame:
     if not symbols:
         return pd.DataFrame()
 
-    end = datetime.now().date()
+    end = datetime.now().date() + timedelta(days=1)
     start = end - timedelta(days=15)
 
     import time
